@@ -1,0 +1,86 @@
+# Bridge driver start messages with the full-reset fallback. Pair 2 (bus 32)
+# did not answer at any address throughout; "recovered camera control bus"
+# lines are omitted. Capture lines are from the camera check after each test.
+
+# Forced trials: pairs 0 and 1 on link A, camera power off and on, then
+# CTRL0 = 0x03 written to pair 1 and a test build loaded that tries link A
+# only once before the fallback.
+
+# Trial 2, fallback checking for the reset value 0x11 instead of selecting link A
+[33349.910097] leopard-max929x 31-0048: link A not selected, resetting the deserializer
+[33370.771792] leopard-max929x 31-0048: deserializer did not respond: -121
+# Then the final build, loaded without a new bad state
+[33468.304596] leopard-max929x 31-0048: link A selected after 1 attempts
+[33470.258331] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+
+# Trials 3 to 6, fallback selecting link A after each reset
+[33679.121406] leopard-max929x 31-0048: link A not selected, resetting the deserializer
+[33680.173397] leopard-max929x 31-0048: link A selected after 2 resets
+[33682.127421] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[33753.773365] leopard-max929x 31-0048: link A selected after 1 attempts
+[33755.726436] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[33821.489151] leopard-max929x 31-0048: link A not selected, resetting the deserializer
+[33822.539932] leopard-max929x 31-0048: link A selected after 2 resets
+[33824.493601] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[33890.287553] leopard-max929x 31-0048: link A not selected, resetting the deserializer
+[33896.010970] leopard-max929x 31-0048: link A selected after 9 resets
+[33897.964426] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+camera=0 simultaneous_raw=300 PASS
+camera=1 simultaneous_raw=300 PASS
+camera=2 simultaneous_raw=300 PASS
+camera=3 simultaneous_raw=300 PASS
+camera=0 Argus=PASS frames=120
+camera=1 Argus=PASS frames=120
+camera=2 Argus=PASS frames=120
+camera=3 Argus=PASS frames=120
+
+# Normal reboot 1 (boot 69e5d7c2-258f-4c07-a291-1ebdfae19c72)
+[   10.787468] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.737557] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.279972] leopard-max929x 31-0048: link A selected after 1 attempts
+[   15.233414] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   18.546147] leopard-max929x 32-0048: link A not selected, resetting the deserializer
+[   27.790203] leopard-max929x 32-0048: deserializer did not respond: -121
+
+# Hard reboot 1 through sysrq, no shutdown step (boot 90b39d59-2490-44b2-b7d8-1b469d9acd1a)
+[   17.987268] leopard-max929x 30-0048: link A not selected, resetting the deserializer
+[   19.005662] leopard-max929x 30-0048: link A selected after 2 resets
+[   20.959766] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   28.280086] leopard-max929x 31-0048: link A not selected, resetting the deserializer
+[   32.509785] leopard-max929x 31-0048: link A selected after 7 resets
+[   34.463818] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   37.776402] leopard-max929x 32-0048: link A not selected, resetting the deserializer
+[   47.276398] leopard-max929x 32-0048: deserializer did not respond: -121
+
+# Hard reboot 2 (boot 005f5ec3-ef04-4bba-b258-7b107d6efe03)
+[   10.980421] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.926895] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   20.182171] leopard-max929x 31-0048: link A not selected, resetting the deserializer
+[   26.972728] leopard-max929x 31-0048: link A selected after 11 resets
+[   28.926765] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   32.239371] leopard-max929x 32-0048: link A not selected, resetting the deserializer
+[   41.835510] leopard-max929x 32-0048: deserializer did not respond: -121
+camera=0 simultaneous_raw=300 PASS
+camera=1 simultaneous_raw=300 PASS
+camera=2 simultaneous_raw=300 PASS
+camera=3 simultaneous_raw=300 PASS
+camera=0 Argus=PASS frames=120
+camera=1 Argus=PASS frames=120
+camera=2 Argus=PASS frames=120
+camera=3 Argus=PASS frames=120
+
+# Normal reboot 2 (boot de890f76-b7e5-4a5e-a336-4e4ec02d062e)
+[   11.312867] leopard-max929x 30-0048: link A selected after 1 attempts
+[   13.278908] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.821218] leopard-max929x 31-0048: link A selected after 1 attempts
+[   15.779016] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   19.087499] leopard-max929x 32-0048: link A not selected, resetting the deserializer
+[   28.459626] leopard-max929x 32-0048: deserializer did not respond: -121
+camera=0 simultaneous_raw=300 PASS
+camera=1 simultaneous_raw=300 PASS
+camera=2 simultaneous_raw=300 PASS
+camera=3 simultaneous_raw=300 PASS
+camera=0 Argus=PASS frames=120
+camera=1 Argus=PASS frames=120
+camera=2 Argus=PASS frames=120
+camera=3 Argus=PASS frames=120

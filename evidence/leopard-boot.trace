@@ -1,0 +1,123 @@
+# Sanitized physical trace: only I2C events on camera adapters 30-32.
+2.480041: i2c_write: i2c-30 #0 a=048 f=0000 l=3 [00-10-21]
+2.546339: i2c_result: i2c-30 n=0 ret=-11
+3.056040: i2c_write: i2c-31 #0 a=048 f=0000 l=3 [00-10-21]
+3.089240: i2c_result: i2c-31 n=0 ret=-121
+3.600036: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [00-10-21]
+3.633192: i2c_result: i2c-32 n=1 ret=1
+3.952059: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [00-00-c0]
+3.963806: i2c_result: i2c-32 n=1 ret=1
+4.272042: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-6b-12]
+4.272465: i2c_result: i2c-32 n=1 ret=1
+4.272474: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-73-13]
+4.272868: i2c_result: i2c-32 n=1 ret=1
+4.272874: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-7b-32]
+4.273261: i2c_result: i2c-32 n=1 ret=1
+4.273266: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-83-32]
+4.273650: i2c_result: i2c-32 n=1 ret=1
+4.273654: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-8b-32]
+4.274038: i2c_result: i2c-32 n=1 ret=1
+4.274043: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-93-32]
+4.274428: i2c_result: i2c-32 n=1 ret=1
+4.274432: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-9b-32]
+4.274816: i2c_result: i2c-32 n=1 ret=1
+4.274820: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-a3-32]
+4.275208: i2c_result: i2c-32 n=1 ret=1
+4.275215: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-ab-32]
+4.275599: i2c_result: i2c-32 n=1 ret=1
+4.275604: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [00-10-23]
+4.276015: i2c_result: i2c-32 n=1 ret=1
+4.592028: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-10-21]
+4.592422: i2c_result: i2c-32 n=1 ret=1
+4.912026: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [00-10-21]
+4.912415: i2c_result: i2c-32 n=1 ret=1
+5.232040: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [03-30-10]
+5.232437: i2c_result: i2c-32 n=1 ret=1
+5.232444: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [03-33-e4]
+5.232826: i2c_result: i2c-32 n=1 ret=1
+5.232831: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [03-31-30]
+5.233211: i2c_result: i2c-32 n=1 ret=1
+5.233217: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [03-11-30]
+5.233597: i2c_result: i2c-32 n=1 ret=1
+5.233602: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [03-08-63]
+5.234017: i2c_result: i2c-32 n=1 ret=1
+5.234048: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [03-14-22]
+5.234433: i2c_result: i2c-32 n=1 ret=1
+5.234438: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [03-16-6c]
+5.234862: i2c_result: i2c-32 n=1 ret=1
+5.234868: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [03-18-22]
+5.235278: i2c_result: i2c-32 n=1 ret=1
+5.235283: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [03-1a-22]
+5.235664: i2c_result: i2c-32 n=1 ret=1
+5.235669: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-02-33]
+5.236053: i2c_result: i2c-32 n=1 ret=1
+5.236059: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-42-50]
+5.236439: i2c_result: i2c-32 n=1 ret=1
+5.236444: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-43-34]
+5.236891: i2c_result: i2c-32 n=1 ret=1
+5.236900: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [02-be-90]
+5.237313: i2c_result: i2c-32 n=1 ret=1
+5.237319: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [02-bf-60]
+5.237752: i2c_result: i2c-32 n=1 ret=1
+5.237759: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [03-f1-89]
+5.238189: i2c_result: i2c-32 n=1 ret=1
+5.238194: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [03-30-10]
+5.238615: i2c_result: i2c-32 n=1 ret=1
+5.238621: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [03-33-e4]
+5.239056: i2c_result: i2c-32 n=1 ret=1
+5.239061: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [03-31-30]
+5.239505: i2c_result: i2c-32 n=1 ret=1
+5.239510: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [03-11-c0]
+5.239932: i2c_result: i2c-32 n=1 ret=1
+5.239936: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [03-08-6c]
+5.240366: i2c_result: i2c-32 n=1 ret=1
+5.240372: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [03-14-22]
+5.240800: i2c_result: i2c-32 n=1 ret=1
+5.240806: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [03-16-22]
+5.241221: i2c_result: i2c-32 n=1 ret=1
+5.241226: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [03-18-6c]
+5.241652: i2c_result: i2c-32 n=1 ret=1
+5.241657: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [03-1a-22]
+5.242087: i2c_result: i2c-32 n=1 ret=1
+5.242093: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [00-02-c3]
+5.242521: i2c_result: i2c-32 n=1 ret=1
+5.242526: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [00-42-54]
+5.242928: i2c_result: i2c-32 n=1 ret=1
+5.242933: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [00-43-34]
+5.243365: i2c_result: i2c-32 n=1 ret=1
+5.243370: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [02-be-90]
+5.243792: i2c_result: i2c-32 n=1 ret=1
+5.243797: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [02-bf-60]
+5.244227: i2c_result: i2c-32 n=1 ret=1
+5.244232: i2c_write: i2c-32 #0 a=062 f=0000 l=3 [03-f1-89]
+5.244653: i2c_result: i2c-32 n=1 ret=1
+5.244658: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [03-30-04]
+5.245057: i2c_result: i2c-32 n=1 ret=1
+5.245062: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [03-33-4e]
+5.245465: i2c_result: i2c-32 n=1 ret=1
+5.245470: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [03-34-e4]
+5.245868: i2c_result: i2c-32 n=1 ret=1
+5.245873: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [04-0a-00]
+5.246273: i2c_result: i2c-32 n=1 ret=1
+5.246280: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [04-4a-40]
+5.246679: i2c_result: i2c-32 n=1 ret=1
+5.246686: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [04-8a-40]
+5.247116: i2c_result: i2c-32 n=1 ret=1
+5.247124: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [04-ca-00]
+5.247530: i2c_result: i2c-32 n=1 ret=1
+5.247535: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [03-1d-2f]
+5.247935: i2c_result: i2c-32 n=1 ret=1
+5.247940: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [03-20-2f]
+5.248344: i2c_result: i2c-32 n=1 ret=1
+5.248349: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [03-23-2f]
+5.248747: i2c_result: i2c-32 n=1 ret=1
+5.248752: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [03-26-2f]
+5.249150: i2c_result: i2c-32 n=1 ret=1
+5.249155: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [00-51-01]
+5.249553: i2c_result: i2c-32 n=1 ret=1
+5.249558: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [00-52-02]
+5.249979: i2c_result: i2c-32 n=1 ret=1
+5.249984: i2c_write: i2c-32 #0 a=048 f=0000 l=3 [03-32-00]
+5.250406: i2c_result: i2c-32 n=1 ret=1
+5.250411: i2c_write: i2c-32 #0 a=060 f=0000 l=3 [00-00-c4]
+5.250833: i2c_result: i2c-32 n=1 ret=1

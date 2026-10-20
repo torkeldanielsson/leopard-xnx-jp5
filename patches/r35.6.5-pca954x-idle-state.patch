@@ -1,0 +1,23 @@
+SPDX-License-Identifier: GPL-2.0-only
+Modification date: 2026-10-19
+Preserve R35 mux idle-state policy instead of applying the R32 bitmask operation.
+
+--- a/drivers/i2c/muxes/i2c-mux-pca954x.c
++++ b/drivers/i2c/muxes/i2c-mux-pca954x.c
+@@ -590,11 +590,11 @@
+ 				break;
+ 			idle_disconnect_pd = pdata->modes[num].deselect_on_exit;
+ 		}
+-		if (client->dev.of_node)
+-			idle_disconnect_pd = true;
+-
+-		data->idle_state |= (idle_disconnect_pd ||
+-				   data->idle_state) << num;
++		/* idle_state is an enum/index, not the R32 deselect bitmask.
++		 * Preserve the DT idle-state / i2c-mux-idle-disconnect policy.
++		 */
++		if (idle_disconnect_pd)
++			data->idle_state = MUX_IDLE_DISCONNECT;
+ 		ret = i2c_mux_add_adapter(muxc, force, num, class);
+ 		if (ret)
+ 			goto fail_cleanup;

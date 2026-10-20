@@ -1,0 +1,8 @@
+camera=0 simultaneous_raw=300 PASS
+camera=1 simultaneous_raw=300 PASS
+camera=2 simultaneous_raw=300 PASS
+camera=3 simultaneous_raw=300 PASS
+camera=0 Argus=PASS frames=120
+camera=1 Argus=PASS frames=120
+camera=2 Argus=PASS frames=120
+camera=3 Argus=PASS frames=120

@@ -1,0 +1,53 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT
+# One-shot module reset through the Xavier NX PMIC, run by systemd-shutdown after unmount.
+# Install in /usr/lib/systemd/system-shutdown; arm using a root-owned mode-0600
+# /run/leopard-pmic-reset-armed file containing the module serial below.
+# --check only reads registers. An ordinary reboot is unaffected when unarmed.
+# Register semantics: NVIDIA max77620-poweroff.c, max77620_pm_power_reset(),
+# and tegra194-mb1-bct-reset-p3668-0001-a00.cfg (MAX20024 on P3668).
+set -eu
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+export PATH
+
+armed=/run/leopard-pmic-reset-armed
+serial=SET_YOUR_MODULE_SERIAL
+case "${1:-}" in
+    --check) ;;
+    reboot)
+        [ -f "$armed" ] || exit 0
+        [ "$(stat -c '%u:%a' "$armed")" = 0:600 ] || exit 0
+        [ "$(cat "$armed")" = "$serial" ] || exit 0
+        ;;
+    *) exit 0 ;;
+esac
+case "$serial" in
+    ''|*[!0-9]*) echo 'Set the exact module serial in this hook before use.' >&2; exit 1 ;;
+esac
+[ "$(id -u)" = 0 ]
+[ "$(tr -d '\000' </sys/firmware/devicetree/base/serial-number)" = "$serial" ]
+[ "$(tr -d '\000' </sys/firmware/devicetree/base/bpmp/i2c/spmic@3c/compatible)" = maxim,max20024 ]
+[ "$(cat /sys/class/i2c-adapter/i2c-4/name)" = 'Tegra BPMP I2C adapter' ]
+
+config1=$(i2cget -f -y 4 0x3c 0x41 b)
+config2=$(i2cget -f -y 4 0x3c 0x42 b)
+# Fail closed on unexpected read output; preserve all unrelated bits.
+case "$config1:$config2" in
+    0x[0-9a-f][0-9a-f]:0x[0-9a-f][0-9a-f]) ;;
+    *) exit 1 ;;
+esac
+[ "$((config1 & 128))" = 0 ]
+printf 'leopard-pmic-reset: ONOFFCNFG1=%s ONOFFCNFG2=%s\n' "$config1" "$config2"
+[ "$1" != --check ] || exit 0
+
+rm -f "$armed"
+# Require successful readback of automatic wake before triggering reset.
+i2cset -f -y 4 0x3c 0x42 "$((config2 | 128))" b
+wake=$(i2cget -f -y 4 0x3c 0x42 b)
+[ "$((wake))" = "$((config2 | 128))" ]
+sync
+printf '<5>leopard-pmic-reset: automatic wake verified; issuing SFT_RST\n' >/dev/kmsg
+i2cset -f -y 4 0x3c 0x41 "$((config1 | 128))" b
+sleep 3
+# If hardware has not reset, let systemd perform its normal reboot.
+printf '<3>leopard-pmic-reset: reset returned without restarting\n' >/dev/kmsg

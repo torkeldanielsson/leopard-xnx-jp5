@@ -1,0 +1,70 @@
+# Module reset 1, standard power sequencing
+[   11.005844] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.960126] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.506082] leopard-max929x 31-0048: link A selected after 1 attempts
+[   15.455628] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   18.768258] leopard-max929x 32-0048: deserializer did not respond on link A
+[   18.769999] leopard-max929x: probe of 32-0048 failed with error -121
+camera=0 simultaneous_raw90=PASS
+camera=1 simultaneous_raw90=PASS
+camera=2 simultaneous_raw90=PASS
+camera=3 simultaneous_raw90=PASS
+# Module reset 2, standard power sequencing
+[   10.730785] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.673265] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.247215] leopard-max929x 31-0048: link A selected after 1 attempts
+[   15.233179] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   18.545587] leopard-max929x 32-0048: deserializer did not respond on link A
+[   18.547213] leopard-max929x: probe of 32-0048 failed with error -121
+camera=0 simultaneous_raw90=PASS
+camera=1 simultaneous_raw90=PASS
+camera=2 simultaneous_raw90=PASS
+camera=3 simultaneous_raw90=PASS
+# Module reset 3, standard power sequencing
+[   11.046731] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.996888] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.599370] leopard-max929x 31-0048: link A selected after 1 attempts
+[   15.552855] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   18.865618] leopard-max929x 32-0048: deserializer did not respond on link A
+[   18.867292] leopard-max929x: probe of 32-0048 failed with error -121
+camera=0 simultaneous_raw90=PASS
+camera=1 simultaneous_raw90=PASS
+camera=2 simultaneous_raw90=PASS
+camera=3 simultaneous_raw90=PASS
+# Module reset 4, standard power sequencing
+[   10.792476] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.742129] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.316676] leopard-max929x 31-0048: link A selected after 1 attempts
+[   15.270167] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   18.586919] leopard-max929x 32-0048: deserializer did not respond on link A
+[   18.588619] leopard-max929x: probe of 32-0048 failed with error -121
+camera=0 simultaneous_raw90=PASS
+camera=1 simultaneous_raw90=PASS
+camera=2 simultaneous_raw90=PASS
+camera=3 simultaneous_raw90=PASS
+camera=0 Argus=PASS frames=120
+camera=1 Argus=PASS frames=120
+camera=2 Argus=PASS frames=120
+camera=3 Argus=PASS frames=120
+# Module reset 5, power sequencing period 1280 us
+[   10.979825] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.929770] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.472425] leopard-max929x 31-0048: link A selected after 1 attempts
+[   15.425796] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   18.742468] leopard-max929x 32-0048: deserializer did not respond on link A
+[   18.744206] leopard-max929x: probe of 32-0048 failed with error -121
+camera=0 simultaneous_raw90=PASS
+camera=1 simultaneous_raw90=PASS
+camera=2 simultaneous_raw90=PASS
+camera=3 simultaneous_raw90=PASS
+# Module reset 6, power sequencing period 2560 us
+[   11.266034] leopard-max929x 30-0048: link A selected after 1 attempts
+[   13.220146] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.762480] leopard-max929x 31-0048: link A selected after 1 attempts
+[   15.712225] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   19.024802] leopard-max929x 32-0048: deserializer did not respond on link A
+[   19.027136] leopard-max929x: probe of 32-0048 failed with error -121
+camera=0 simultaneous_raw90=PASS
+camera=1 simultaneous_raw90=PASS
+camera=2 simultaneous_raw90=PASS
+camera=3 simultaneous_raw90=PASS

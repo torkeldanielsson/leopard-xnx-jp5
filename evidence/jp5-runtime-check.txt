@@ -1,0 +1,2 @@
+CUDA devices: 1 GPU: Xavier runtime: 11040 cuDNN: 8600
+TensorRT library loaded

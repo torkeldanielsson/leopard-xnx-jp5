@@ -1,0 +1,105 @@
+{
+  "date_utc": "2026-10-20",
+  "hardware": "LI-XNX-BOX-GMSL2",
+  "l4t": "35.6.5",
+  "installed_driver": "link A selection only, before the full-reset fallback",
+  "driver_changed": false,
+  "rebooted": false,
+  "initial_working_cameras": [0, 1, 2, 3],
+  "final_working_cameras": [0, 1, 2, 3],
+  "unavailable_cameras": [4, 5],
+  "pair_buses": [30, 31, 32],
+  "software_reset_marker": {
+    "bus": 31,
+    "chip_id": "0x94",
+    "revision": "0x07",
+    "preconditions": [
+      "Argus stopped; sensor and bridge drivers unloaded",
+      "Working bridges parked on link A with CTRL0=0x21",
+      "Readback CTRL0=0x01 and chip ID=0x94 three times",
+      "CSI output disabled"
+    ],
+    "marker_register": "0x0333",
+    "original_value": "0x4e",
+    "test_value": "0xe4",
+    "target_readback_before_reset": ["0xe4", "0xe4", "0xe4"],
+    "other_bus_30_readback": ["0x4e", "0x4e", "0x4e"],
+    "reset_write": {"register": "0x0010", "value": "0x81", "acknowledged": true},
+    "wait_ms": 300,
+    "immediate_identity_reads": ["0x94", "NAK", "0x95"],
+    "local_recovery": "Host bus clear, then two bounded CTRL0=0x01 attempts, each with 20 ms wait and identity verification",
+    "marker_readback_before_reinitialization": ["0x4e", "0x4e", "0x4e"],
+    "other_bus_30_marker_after_reset": "0x4e",
+    "lane_count_readback": {"0x044a": "0x40", "0x048a": "0x40"},
+    "published_lane_count_defaults": {"0x044a": "0xc0", "0x048a": "0xc0"},
+    "interpretation": "Marker clearing verifies a register-reset effect. The lane-count default discrepancy remains unresolved; no claim that every internal domain was verified.",
+    "script_verdict_note": "The original script logged full_reset_verified=false because it additionally required both lane-count registers to read 0xc0.",
+    "comparison_limit": "Earlier 0x80 trials lacked this marker; superiority of 0x81 over 0x80 is not established."
+  },
+  "gpio_tests": {
+    "individual_outputs": ["PP.04", "PP.05", "PQ.03", "PR.00"],
+    "individual_sequence": "Output latch 0 -> 1, wait 200 ms, sample bridges, restore 0, wait 300 ms, sample again",
+    "shared_enable": "PCC.00 low 3 seconds, high 3 seconds, host bus clear, read bridges before driver reload",
+    "healthy_bridge_values_retained": {
+      "0x000d": "0x94",
+      "0x0010": "0x01",
+      "0x044a": "0x40",
+      "0x048a": "0x40"
+    },
+    "failed_pair_recovered": false,
+    "scope": "Output latches verified; no chip-pin voltage, PWDNB continuity or supply measurement."
+  },
+  "remote_isolation_experiment": {
+    "bus": 31,
+    "write": {"register": "0x0001", "before": "0x02", "requested": "0x12"},
+    "result": "Acknowledged write, failed readback, local access lost. Planned marker write and RESET_ALL were not reached.",
+    "recovery": [
+      "Twelve bounded rounds at 100 kHz: host bus clear, REG1=0x02, 100 ms wait, CTRL0=0x01, 20 ms wait, identity reads",
+      "Final round returned chip ID 0x94 three times but REG1=0x03",
+      "At restored 400 kHz, repeated reads confirmed REG1=0x03",
+      "One further REG1=0x02 write, readback 0x02 twice and chip ID 0x94",
+      "CTRL0=0x21, wait 300 ms, verify REG1=0x02, CTRL0=0x01, chip ID 0x94",
+      "Bind bridge driver; both sensors bound"
+    ],
+    "recovered": true,
+    "cause_limit": "The write that produced REG1=0x03 is not identified; intervening failed writes may have taken effect.",
+    "recommendation": "Do not use the DIS_REM_CC experiment as a validated recovery procedure on this box."
+  },
+  "original_failed_pair_attempts": {
+    "bus": 32,
+    "reg1_ctrl0_repair_rounds": 16,
+    "repair_clock_hz": 100000,
+    "valid_identity_readback": false,
+    "subsequent_reset_value": "0x81",
+    "subsequent_reset_attempts": 3,
+    "reset_clock_hz": 400000,
+    "local_selection_attempts_per_reset": 3,
+    "recovered": false
+  },
+  "final_capture": {
+    "cameras": [0, 1, 2, 3],
+    "resolution": "1920x1080",
+    "raw_format": "RG12",
+    "simultaneous_raw_frames_each": 300,
+    "simultaneous_raw_result": "PASS",
+    "argus_counted_frames_each": 120,
+    "argus_timestamps": "increasing",
+    "argus_result": "PASS",
+    "acceptance_completed_utc": "2026-10-20T05:14:51Z"
+  },
+  "restored_state": {
+    "i2c_clock_hz": 400000,
+    "mux_idle_state": -2,
+    "PCC.00_output": 1,
+    "other_tested_gpio_outputs": 0,
+    "argus_active": true,
+    "diagnostic_jobs_running": false,
+    "i2c_kick_module_loaded": false
+  },
+  "open_questions": [
+    "Actual MAX9296A PWDNB/supply wiring on this carrier",
+    "Cause of persistent pair-2 control-access failure",
+    "Published versus observed lane-count reset defaults",
+    "Mux readback of 0xff despite verified branch separation between buses 30 and 31"
+  ]
+}

@@ -1,0 +1,19 @@
+camera=0 sequential=PASS
+camera=1 sequential=PASS
+camera=2 sequential=PASS
+camera=3 sequential=PASS
+camera=4 sequential=PASS
+camera=5 sequential=PASS
+camera=0 simultaneous=PASS
+camera=1 simultaneous=PASS
+camera=2 simultaneous=PASS
+camera=3 simultaneous=PASS
+camera=4 simultaneous=PASS
+camera=5 simultaneous=PASS
+camera=0 Argus=PASS frames=120
+camera=1 Argus=PASS frames=120
+camera=2 Argus=PASS frames=120
+camera=3 Argus=PASS frames=120
+camera=4 Argus=PASS frames=120
+camera=5 Argus=PASS frames=120
+Six-camera acceptance PASS

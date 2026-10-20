@@ -1,0 +1,23 @@
+SPDX-License-Identifier: GPL-2.0-only
+Modification date: 2026-10-19
+Honor skip_mux_detect before camera bridge power has been enabled.
+
+--- a/drivers/i2c/muxes/i2c-mux-pca954x.c
++++ b/drivers/i2c/muxes/i2c-mux-pca954x.c
+@@ -561,10 +561,12 @@
+ 	 * initializes the mux to a channel
+ 	 * or disconnected state.
+ 	 */
+-	ret = pca954x_init(client, data);
+-	if (ret < 0) {
+-		dev_warn(dev, "probe failed\n");
+-		goto fail_cleanup;
++	if (!fskip) {
++		ret = pca954x_init(client, data);
++		if (ret < 0) {
++			dev_warn(dev, "probe failed\n");
++			goto fail_cleanup;
++		}
+ 	}
+ 
+ 	ret = pca954x_irq_setup(muxc);

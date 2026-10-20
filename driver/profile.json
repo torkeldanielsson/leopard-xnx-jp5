@@ -1,0 +1,1054 @@
+{
+  "model": "LI-XNX-BOX-GMSL2/IMX185",
+  "source_l4t": "32.4.3",
+  "image_sha256": "1ef8020d675083b19bcd269e86c589787711f9ba75dd1ffde8e6ac377a81d451",
+  "initial_delay_ms": 500,
+  "link_init": [
+    {
+      "address": 72,
+      "reg": 16,
+      "value": 33,
+      "delay_ms": 300
+    },
+    {
+      "address": 98,
+      "reg": 0,
+      "value": 192,
+      "delay_ms": 300
+    },
+    {
+      "address": 96,
+      "reg": 107,
+      "value": 18,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 115,
+      "value": 19,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 123,
+      "value": 50,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 131,
+      "value": 50,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 139,
+      "value": 50,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 147,
+      "value": 50,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 155,
+      "value": 50,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 163,
+      "value": 50,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 171,
+      "value": 50,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 16,
+      "value": 35,
+      "delay_ms": 300
+    },
+    {
+      "address": 96,
+      "reg": 16,
+      "value": 33,
+      "delay_ms": 300
+    },
+    {
+      "address": 98,
+      "reg": 16,
+      "value": 33,
+      "delay_ms": 300
+    },
+    {
+      "address": 96,
+      "reg": 816,
+      "value": 16,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 819,
+      "value": 228,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 817,
+      "value": 48,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 785,
+      "value": 48,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 776,
+      "value": 99,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 788,
+      "value": 34,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 790,
+      "value": 108,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 792,
+      "value": 34,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 794,
+      "value": 34,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 2,
+      "value": 51,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 66,
+      "value": 80,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 67,
+      "value": 52,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 702,
+      "value": 144,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 703,
+      "value": 96,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 1009,
+      "value": 137,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 816,
+      "value": 16,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 819,
+      "value": 228,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 817,
+      "value": 48,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 785,
+      "value": 192,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 776,
+      "value": 108,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 788,
+      "value": 34,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 790,
+      "value": 34,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 792,
+      "value": 108,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 794,
+      "value": 34,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 2,
+      "value": 195,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 66,
+      "value": 84,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 67,
+      "value": 52,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 702,
+      "value": 144,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 703,
+      "value": 96,
+      "delay_ms": 0
+    },
+    {
+      "address": 98,
+      "reg": 1009,
+      "value": 137,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 816,
+      "value": 4,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 819,
+      "value": 78,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 820,
+      "value": 228,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 1034,
+      "value": 0,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 1098,
+      "value": 64,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 1162,
+      "value": 64,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 1226,
+      "value": 0,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 797,
+      "value": 47,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 800,
+      "value": 47,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 803,
+      "value": 47,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 806,
+      "value": 47,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 81,
+      "value": 1,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 82,
+      "value": 2,
+      "delay_ms": 0
+    },
+    {
+      "address": 72,
+      "reg": 818,
+      "value": 0,
+      "delay_ms": 0
+    },
+    {
+      "address": 96,
+      "reg": 0,
+      "value": 196,
+      "delay_ms": 300
+    }
+  ],
+  "sensor_mode": [
+    {
+      "reg": 12290,
+      "value": 1
+    },
+    {
+      "reg": 12293,
+      "value": 1
+    },
+    {
+      "reg": 12294,
+      "value": 0
+    },
+    {
+      "reg": 12295,
+      "value": 80
+    },
+    {
+      "reg": 12297,
+      "value": 1
+    },
+    {
+      "reg": 12298,
+      "value": 240
+    },
+    {
+      "reg": 12303,
+      "value": 1
+    },
+    {
+      "reg": 12312,
+      "value": 101
+    },
+    {
+      "reg": 12313,
+      "value": 4
+    },
+    {
+      "reg": 12315,
+      "value": 152
+    },
+    {
+      "reg": 12316,
+      "value": 8
+    },
+    {
+      "reg": 12317,
+      "value": 8
+    },
+    {
+      "reg": 12318,
+      "value": 2
+    },
+    {
+      "reg": 12342,
+      "value": 6
+    },
+    {
+      "reg": 12344,
+      "value": 8
+    },
+    {
+      "reg": 12345,
+      "value": 0
+    },
+    {
+      "reg": 12346,
+      "value": 64
+    },
+    {
+      "reg": 12347,
+      "value": 4
+    },
+    {
+      "reg": 12348,
+      "value": 12
+    },
+    {
+      "reg": 12349,
+      "value": 0
+    },
+    {
+      "reg": 12350,
+      "value": 124
+    },
+    {
+      "reg": 12351,
+      "value": 7
+    },
+    {
+      "reg": 12356,
+      "value": 225
+    },
+    {
+      "reg": 12360,
+      "value": 51
+    },
+    {
+      "reg": 12380,
+      "value": 44
+    },
+    {
+      "reg": 12381,
+      "value": 0
+    },
+    {
+      "reg": 12382,
+      "value": 33
+    },
+    {
+      "reg": 12383,
+      "value": 0
+    },
+    {
+      "reg": 12387,
+      "value": 84
+    },
+    {
+      "reg": 12420,
+      "value": 15
+    },
+    {
+      "reg": 12422,
+      "value": 16
+    },
+    {
+      "reg": 12449,
+      "value": 68
+    },
+    {
+      "reg": 12495,
+      "value": 225
+    },
+    {
+      "reg": 12496,
+      "value": 41
+    },
+    {
+      "reg": 12498,
+      "value": 155
+    },
+    {
+      "reg": 12499,
+      "value": 1
+    },
+    {
+      "reg": 12573,
+      "value": 10
+    },
+    {
+      "reg": 12579,
+      "value": 15
+    },
+    {
+      "reg": 12582,
+      "value": 223
+    },
+    {
+      "reg": 12615,
+      "value": 135
+    },
+    {
+      "reg": 12768,
+      "value": 1
+    },
+    {
+      "reg": 12769,
+      "value": 158
+    },
+    {
+      "reg": 12770,
+      "value": 1
+    },
+    {
+      "reg": 12773,
+      "value": 5
+    },
+    {
+      "reg": 12774,
+      "value": 5
+    },
+    {
+      "reg": 12775,
+      "value": 58
+    },
+    {
+      "reg": 12776,
+      "value": 58
+    },
+    {
+      "reg": 12803,
+      "value": 200
+    },
+    {
+      "reg": 12807,
+      "value": 84
+    },
+    {
+      "reg": 12819,
+      "value": 22
+    },
+    {
+      "reg": 12821,
+      "value": 246
+    },
+    {
+      "reg": 12826,
+      "value": 20
+    },
+    {
+      "reg": 12827,
+      "value": 81
+    },
+    {
+      "reg": 12841,
+      "value": 231
+    },
+    {
+      "reg": 12842,
+      "value": 240
+    },
+    {
+      "reg": 12843,
+      "value": 16
+    },
+    {
+      "reg": 12849,
+      "value": 231
+    },
+    {
+      "reg": 12850,
+      "value": 240
+    },
+    {
+      "reg": 12851,
+      "value": 16
+    },
+    {
+      "reg": 12860,
+      "value": 232
+    },
+    {
+      "reg": 12861,
+      "value": 112
+    },
+    {
+      "reg": 12867,
+      "value": 8
+    },
+    {
+      "reg": 12868,
+      "value": 225
+    },
+    {
+      "reg": 12869,
+      "value": 16
+    },
+    {
+      "reg": 12871,
+      "value": 231
+    },
+    {
+      "reg": 12872,
+      "value": 96
+    },
+    {
+      "reg": 12873,
+      "value": 30
+    },
+    {
+      "reg": 12875,
+      "value": 0
+    },
+    {
+      "reg": 12876,
+      "value": 65
+    },
+    {
+      "reg": 12880,
+      "value": 48
+    },
+    {
+      "reg": 12881,
+      "value": 10
+    },
+    {
+      "reg": 12882,
+      "value": 255
+    },
+    {
+      "reg": 12883,
+      "value": 255
+    },
+    {
+      "reg": 12884,
+      "value": 255
+    },
+    {
+      "reg": 12885,
+      "value": 2
+    },
+    {
+      "reg": 12887,
+      "value": 240
+    },
+    {
+      "reg": 12890,
+      "value": 166
+    },
+    {
+      "reg": 12893,
+      "value": 20
+    },
+    {
+      "reg": 12894,
+      "value": 81
+    },
+    {
+      "reg": 12896,
+      "value": 0
+    },
+    {
+      "reg": 12897,
+      "value": 97
+    },
+    {
+      "reg": 12902,
+      "value": 48
+    },
+    {
+      "reg": 12903,
+      "value": 5
+    },
+    {
+      "reg": 12917,
+      "value": 231
+    },
+    {
+      "reg": 12929,
+      "value": 234
+    },
+    {
+      "reg": 12930,
+      "value": 112
+    },
+    {
+      "reg": 12933,
+      "value": 255
+    },
+    {
+      "reg": 12938,
+      "value": 240
+    },
+    {
+      "reg": 12941,
+      "value": 182
+    },
+    {
+      "reg": 12942,
+      "value": 64
+    },
+    {
+      "reg": 12944,
+      "value": 66
+    },
+    {
+      "reg": 12945,
+      "value": 81
+    },
+    {
+      "reg": 12946,
+      "value": 30
+    },
+    {
+      "reg": 12948,
+      "value": 196
+    },
+    {
+      "reg": 12949,
+      "value": 32
+    },
+    {
+      "reg": 12951,
+      "value": 80
+    },
+    {
+      "reg": 12952,
+      "value": 49
+    },
+    {
+      "reg": 12953,
+      "value": 31
+    },
+    {
+      "reg": 12955,
+      "value": 192
+    },
+    {
+      "reg": 12956,
+      "value": 96
+    },
+    {
+      "reg": 12958,
+      "value": 76
+    },
+    {
+      "reg": 12959,
+      "value": 113
+    },
+    {
+      "reg": 12960,
+      "value": 31
+    },
+    {
+      "reg": 12962,
+      "value": 182
+    },
+    {
+      "reg": 12963,
+      "value": 192
+    },
+    {
+      "reg": 12964,
+      "value": 11
+    },
+    {
+      "reg": 12969,
+      "value": 36
+    },
+    {
+      "reg": 12970,
+      "value": 65
+    },
+    {
+      "reg": 12976,
+      "value": 37
+    },
+    {
+      "reg": 12977,
+      "value": 81
+    },
+    {
+      "reg": 12983,
+      "value": 28
+    },
+    {
+      "reg": 12984,
+      "value": 193
+    },
+    {
+      "reg": 12985,
+      "value": 18
+    },
+    {
+      "reg": 12990,
+      "value": 29
+    },
+    {
+      "reg": 12991,
+      "value": 209
+    },
+    {
+      "reg": 12992,
+      "value": 18
+    },
+    {
+      "reg": 12994,
+      "value": 168
+    },
+    {
+      "reg": 12995,
+      "value": 192
+    },
+    {
+      "reg": 12996,
+      "value": 10
+    },
+    {
+      "reg": 12997,
+      "value": 30
+    },
+    {
+      "reg": 12998,
+      "value": 33
+    },
+    {
+      "reg": 13001,
+      "value": 176
+    },
+    {
+      "reg": 13002,
+      "value": 64
+    },
+    {
+      "reg": 13004,
+      "value": 38
+    },
+    {
+      "reg": 13005,
+      "value": 161
+    },
+    {
+      "reg": 13008,
+      "value": 182
+    },
+    {
+      "reg": 13009,
+      "value": 192
+    },
+    {
+      "reg": 13010,
+      "value": 11
+    },
+    {
+      "reg": 13012,
+      "value": 226
+    },
+    {
+      "reg": 13013,
+      "value": 64
+    },
+    {
+      "reg": 13016,
+      "value": 78
+    },
+    {
+      "reg": 13017,
+      "value": 161
+    },
+    {
+      "reg": 13036,
+      "value": 240
+    },
+    {
+      "reg": 13059,
+      "value": 0
+    },
+    {
+      "reg": 13061,
+      "value": 3
+    },
+    {
+      "reg": 13076,
+      "value": 4
+    },
+    {
+      "reg": 13077,
+      "value": 1
+    },
+    {
+      "reg": 13078,
+      "value": 4
+    },
+    {
+      "reg": 13079,
+      "value": 4
+    },
+    {
+      "reg": 13080,
+      "value": 56
+    },
+    {
+      "reg": 13081,
+      "value": 4
+    },
+    {
+      "reg": 13100,
+      "value": 64
+    },
+    {
+      "reg": 13101,
+      "value": 32
+    },
+    {
+      "reg": 13102,
+      "value": 3
+    },
+    {
+      "reg": 13118,
+      "value": 12
+    },
+    {
+      "reg": 13119,
+      "value": 12
+    },
+    {
+      "reg": 13120,
+      "value": 3
+    },
+    {
+      "reg": 13121,
+      "value": 0
+    },
+    {
+      "reg": 13122,
+      "value": 27
+    },
+    {
+      "reg": 13123,
+      "value": 104
+    },
+    {
+      "reg": 13124,
+      "value": 32
+    },
+    {
+      "reg": 13125,
+      "value": 64
+    },
+    {
+      "reg": 13126,
+      "value": 40
+    },
+    {
+      "reg": 13127,
+      "value": 32
+    },
+    {
+      "reg": 13128,
+      "value": 24
+    },
+    {
+      "reg": 13129,
+      "value": 120
+    },
+    {
+      "reg": 13130,
+      "value": 40
+    },
+    {
+      "reg": 13134,
+      "value": 61
+    },
+    {
+      "reg": 13135,
+      "value": 1
+    }
+  ],
+  "sensor_start": [
+    {
+      "reg": 12288,
+      "value": 0
+    },
+    {
+      "reg": 0,
+      "value": 30
+    },
+    {
+      "reg": 12290,
+      "value": 0
+    },
+    {
+      "reg": 12361,
+      "value": 2
+    },
+    {
+      "reg": 0,
+      "value": 210
+    }
+  ],
+  "sensor_stop": [
+    {
+      "reg": 12288,
+      "value": 1
+    },
+    {
+      "reg": 0,
+      "value": 1
+    }
+  ],
+  "sensor_test_pattern": [
+    {
+      "reg": 12298,
+      "value": 0
+    },
+    {
+      "reg": 12302,
+      "value": 0
+    },
+    {
+      "reg": 12425,
+      "value": 0
+    },
+    {
+      "reg": 12428,
+      "value": 19
+    },
+    {
+      "reg": 0,
+      "value": 1
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+# Bridge driver start messages, each followed by the result of
+# test-cameras.sh unless noted. It prints "Six-camera acceptance PASS" only
+# when every camera passed: 6 × 90 raw frames one camera at a time, 6 × 300
+# raw frames all at once and 6 × 120 Argus frames. "recovered camera control
+# bus" lines are omitted. Hard reboots use sysrq and skip the shutdown step.
+
+# Version that allowed 20 resets and stopped all pairs when pair 0 failed
+
+# Cold start after power had been disconnected (boot 37d7584c-faa3-45d6-a99d-196684806027)
+[   10.945436] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.904862] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.469238] leopard-max929x 31-0048: link A selected after 1 attempts
+[   15.454784] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   15.996797] leopard-max929x 32-0048: link A selected after 1 attempts
+[   17.950761] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Normal reboot 1 (boot cabadc73-ebd8-42a1-9c77-ea2de77cae13)
+[   10.788493] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.742341] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.281333] leopard-max929x 31-0048: link A selected after 1 attempts
+[   15.298326] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   15.840193] leopard-max929x 32-0048: link A selected after 1 attempts
+[   17.794333] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Normal reboot 2 (boot b41a6963-a0de-45e4-a31f-d0b0c1de9f0c)
+[   10.600084] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.547630] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.090226] leopard-max929x 31-0048: link A selected after 1 attempts
+[   15.039666] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   15.581584] leopard-max929x 32-0048: link A selected after 1 attempts
+[   17.535659] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Hard reboot 1 (boot 8c189e50-93a9-42cd-9a7b-6eddebbe7052)
+[   17.097291] leopard-max929x 30-0048: link A not selected, resetting the deserializer
+[   17.476321] leopard-max929x 30-0048: link A selected after 1 resets
+[   19.430171] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   26.587256] leopard-max929x 31-0048: link A not selected, resetting the deserializer
+[   27.620221] leopard-max929x 31-0048: link A selected after 2 resets
+[   29.574173] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   36.730046] leopard-max929x 32-0048: link A not selected, resetting the deserializer
+[   39.044163] leopard-max929x 32-0048: link A selected after 4 resets
+[   40.998175] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Hard reboot 2 (boot a1ae0b70-fe1b-47c1-adf8-3b448d5e765c)
+[   17.357047] leopard-max929x 30-0048: link A not selected, resetting the deserializer
+[   30.154535] leopard-max929x 30-0048: deserializer did not respond: -121
+[   30.154741] leopard-max929x: probe of 30-0048 failed with error -121
+Cannot open device /dev/video0, exiting.
+# Pairs 1 and 2 waited for pair 0 and never started.
+
+# Camera power off for about a minute and on again: the deserializers kept
+# answering erratically. Then the driver was reloaded (boot a1ae0b70-fe1b-47c1-adf8-3b448d5e765c)
+[  222.133498] leopard-max929x 30-0048: link A not selected, resetting the deserializer
+[  229.243677] leopard-max929x 30-0048: link A selected after 11 resets
+[  231.197690] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[  238.384912] leopard-max929x 31-0048: link A not selected, resetting the deserializer
+[  238.779811] leopard-max929x 31-0048: link A selected after 1 resets
+[  240.733684] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[  247.965815] leopard-max929x 32-0048: link A not selected, resetting the deserializer
+[  249.020308] leopard-max929x 32-0048: link A selected after 2 resets
+[  250.973673] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Current version: up to 60 resets, pair 0 stays bound when it fails
+
+# Test build that fails pair 0 without touching it, loaded as a module. Only
+# the four sensors on pairs 1 and 2 registered, as video0 to video3, and a
+# capture script ran 300 raw frames on them at once.
+[  486.906863] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 failed: -5
+[  487.448727] leopard-max929x 31-0048: link A selected after 1 attempts
+[  489.402703] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[  489.944913] leopard-max929x 32-0048: link A selected after 1 attempts
+[  491.898728] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+camera=0 simultaneous_raw=300 PASS
+camera=1 simultaneous_raw=300 PASS
+camera=2 simultaneous_raw=300 PASS
+camera=3 simultaneous_raw=300 PASS
+
+# Hard reboot 1 (boot 96dabe8e-73bd-4245-aba5-8f167ac04eaa)
+[   17.655754] leopard-max929x 30-0048: link A not selected, resetting the deserializer
+[   19.332577] leopard-max929x 30-0048: link A selected after 3 resets
+[   21.286719] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   21.860713] leopard-max929x 31-0048: link A selected after 1 attempts
+[   23.814710] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   24.388532] leopard-max929x 32-0048: link A selected after 1 attempts
+[   26.342725] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Hard reboot 2 (boot 672bc0c4-3eba-4625-8dd7-1567472ebc97)
+[   10.284963] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.234301] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   19.456611] leopard-max929x 31-0048: link A not selected, resetting the deserializer
+[   23.684320] leopard-max929x 31-0048: link A selected after 7 resets
+[   25.638275] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   26.212315] leopard-max929x 32-0048: link A selected after 1 attempts
+[   28.166270] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Hard reboot 3 (boot ca0d56af-f69e-4dfc-a649-1ebaed9f34e5)
+[   17.475118] leopard-max929x 30-0048: link A not selected, resetting the deserializer
+[   25.533667] leopard-max929x 30-0048: link A selected after 13 resets
+[   27.487683] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   28.061514] leopard-max929x 31-0048: link A selected after 1 attempts
+[   30.015697] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   37.202750] leopard-max929x 32-0048: link A not selected, resetting the deserializer
+[   37.597660] leopard-max929x 32-0048: link A selected after 1 resets
+[   39.551654] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Hard reboot 4 (boot 034a4fad-6bb7-4c79-98b9-6ef2d84babeb)
+[   10.438003] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.424129] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   19.799130] leopard-max929x 31-0048: link A not selected, resetting the deserializer
+[   25.317941] leopard-max929x 31-0048: link A selected after 9 resets
+[   27.272077] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   34.421364] leopard-max929x 32-0048: link A not selected, resetting the deserializer
+[   34.789868] leopard-max929x 32-0048: link A selected after 1 resets
+[   36.744073] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Normal reboot 1 (boot 5507da0f-23a7-45e8-80ca-3980e423ef0f)
+[   10.534525] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.483955] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.022308] leopard-max929x 31-0048: link A selected after 1 attempts
+[   14.976004] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   15.517970] leopard-max929x 32-0048: link A selected after 1 attempts
+[   17.471952] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Normal reboot 2 (boot df65069e-b452-4710-9e30-580c12c04c8c)
+[   10.723369] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.673790] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   13.215726] leopard-max929x 31-0048: link A selected after 1 attempts
+[   15.173219] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   15.711371] leopard-max929x 32-0048: link A selected after 1 attempts
+[   17.665253] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Command-line tool. The driver was unloaded, which leaves link A selected on
+# every pair, and pair 1 was set up with `leopard-gmsl init 31 --apply`, which
+# leaves both links enabled. Three trials: camera power off for 3 s and on
+# again, reads of pair 1's CTRL0 and chip ID, then a test build of the tool
+# that tries link A once before the full reset, followed by the link setup.
+after power cycle: ctrl=Remote I/O error id=Remote I/O error id=Remote I/O error id=Remote I/O error
+link A selected after 2 resets
+after power cycle: ctrl=Remote I/O error id=Remote I/O error id=Remote I/O error id=Remote I/O error
+link A selected after 4 resets
+after power cycle: ctrl=0x0f id=Remote I/O error id=Remote I/O error id=Remote I/O error
+link A selected after 3 resets
+# Then the driver was reloaded (boot df65069e-b452-4710-9e30-580c12c04c8c)
+[ 2307.875652] leopard-max929x 30-0048: link A selected after 1 attempts
+[ 2309.828616] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[ 2310.371033] leopard-max929x 31-0048: link A selected after 1 attempts
+[ 2312.324338] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[ 2312.866319] leopard-max929x 32-0048: link A selected after 1 attempts
+[ 2314.820161] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Hard reboot 5 (boot 1b724990-311f-490f-9578-3a1181e7931f)
+[   10.781499] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.735213] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   19.970749] leopard-max929x 31-0048: link A not selected, resetting the deserializer
+[   35.069229] leopard-max929x 31-0048: link A selected after 24 resets
+[   37.023210] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   37.597168] leopard-max929x 32-0048: link A selected after 1 attempts
+[   39.551205] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS
+
+# Normal reboot 3 (boot c9400a26-4365-400d-b34c-96dd8ee57e08)
+[   10.210566] leopard-max929x 30-0048: link A selected after 1 attempts
+[   12.163992] leopard-max929x 30-0048: IMX185 GMSL2 pair 0 ready
+[   12.706529] leopard-max929x 31-0048: link A selected after 1 attempts
+[   14.656014] leopard-max929x 31-0048: IMX185 GMSL2 pair 1 ready
+[   15.197909] leopard-max929x 32-0048: link A selected after 1 attempts
+[   17.151963] leopard-max929x 32-0048: IMX185 GMSL2 pair 2 ready
+Six-camera acceptance PASS

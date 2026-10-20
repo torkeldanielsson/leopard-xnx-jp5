@@ -1,0 +1,64 @@
+{"event":"gpio_baseline","monotonic":29109.699431901,"name":"PP.04","cfg":3,"floating":0,"output":0}
+{"event":"gpio_baseline","monotonic":29109.727409238,"name":"PP.05","cfg":3,"floating":0,"output":0}
+{"event":"gpio_baseline","monotonic":29109.754514213,"name":"PQ.03","cfg":3,"floating":0,"output":0}
+{"event":"gpio_baseline","monotonic":29109.78152069,"name":"PR.00","cfg":3,"floating":0,"output":0}
+{"event":"snapshot","monotonic":29110.828313203,"label":"parked_before_gpio_tests","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"gpio_high","monotonic":29110.843914164,"name":"PP.04"}
+{"event":"snapshot","monotonic":29111.125663372,"label":"PP.04_high","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"gpio_restored","monotonic":29111.141089483,"name":"PP.04","output":0}
+{"event":"snapshot","monotonic":29111.526942026,"label":"PP.04_after","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"gpio_high","monotonic":29111.541939651,"name":"PP.05"}
+{"event":"snapshot","monotonic":29111.827986161,"label":"PP.05_high","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"gpio_restored","monotonic":29111.843518545,"name":"PP.05","output":0}
+{"event":"snapshot","monotonic":29112.229413905,"label":"PP.05_after","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"gpio_high","monotonic":29112.24485384,"name":"PQ.03"}
+{"event":"snapshot","monotonic":29112.530263223,"label":"PQ.03_high","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"gpio_restored","monotonic":29112.547367658,"name":"PQ.03","output":0}
+{"event":"snapshot","monotonic":29112.936273104,"label":"PQ.03_after","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"gpio_high","monotonic":29112.951382091,"name":"PR.00"}
+{"event":"snapshot","monotonic":29113.235874694,"label":"PR.00_high","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"gpio_restored","monotonic":29113.251985325,"name":"PR.00","output":0}
+{"event":"snapshot","monotonic":29113.636913731,"label":"PR.00_after","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"snapshot","monotonic":29259.127398811,"label":"positive-control_before","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"write","monotonic":29259.139226033,"bus":31,"reg":"0x10","value":"0x80","rc":0,"error":""}
+{"event":"snapshot","monotonic":29259.501526467,"label":"software_full_reset","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"snapshot","monotonic":29321.159825558,"label":"positive-control_before","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"write","monotonic":29321.169362032,"bus":31,"reg":"0x10","value":"0x80","rc":0,"error":""}
+{"event":"snapshot","monotonic":29321.951771146,"label":"software_full_reset_before_link_selection","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":{"error":"Error: Sending messages failed: Connection timed out"}},"32":{"0xd":{"error":"Error: Sending messages failed: Connection timed out"}}}}
+{"event":"snapshot","monotonic":29374.427412417,"label":"positive-control_before","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"write","monotonic":29374.436769017,"bus":31,"reg":"0x10","value":"0x80","rc":0,"error":""}
+{"event":"snapshot","monotonic":29375.225678473,"label":"software_full_reset_before_link_selection","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":{"error":"Error: Sending messages failed: Connection timed out"}},"32":{"0xd":{"error":"Error: Sending messages failed: Connection timed out"}}}}
+{"event":"snapshot","monotonic":29419.054287072,"label":"camera-enable_before","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"shared_enable_low","monotonic":29419.072806704}
+{"event":"shared_enable_high","monotonic":29422.096399382,"output":1}
+{"event":"snapshot","monotonic":29425.281557077,"label":"shared_enable_after_recovery_before_driver","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"snapshot","monotonic":29448.560588749,"label":"positive-control_before","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"write","monotonic":29448.570576687,"bus":31,"reg":"0x10","value":"0x80","rc":0,"error":""}
+{"event":"snapshot","monotonic":29448.925927892,"label":"software_full_reset_before_link_selection","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"write","monotonic":29449.956442617,"bus":31,"reg":"0x10","value":"0x1","rc":1,"error":"Error: Sending messages failed: Connection timed out"}
+{"event":"write","monotonic":29450.312446824,"bus":31,"reg":"0x10","value":"0x1","rc":0,"error":""}
+{"event":"snapshot","monotonic":29450.453278605,"label":"software_full_reset_after_local_recovery","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"snapshot","monotonic":29530.682168181,"label":"isolated-canary_before","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"chip_identity","monotonic":29530.735555631,"chip_id":148,"revision":7}
+{"event":"write","monotonic":29530.745902391,"bus":31,"reg":"0x1","value":"0x12","rc":0,"error":""}
+{"event":"write","monotonic":29530.764481066,"bus":31,"reg":"0x333","value":"0x4e","rc":1,"error":"Error: Sending messages failed: Remote I/O error"}
+{"event":"write","monotonic":29530.979071105,"bus":31,"reg":"0x1","value":"0x2","rc":1,"error":"Error: Sending messages failed: Connection timed out"}
+{"event":"canary_restored","monotonic":29531.439513162,"lane_map":{"error":"Error: Sending messages failed: Connection timed out"},"cc":{"error":"Error: Sending messages failed: Connection timed out"}}
+{"event":"finished_restore","monotonic":29612.784685384,"recovered":false}
+{"event":"restore_pair","monotonic":29883.171517033,"bus":32,"attempt":1,"reg1_write":1,"ctrl_write":1,"ids":[{"error":"Error: Sending messages failed: Remote I/O error"},{"error":"Error: Sending messages failed: Remote I/O error"},{"error":"Error: Sending messages failed: Remote I/O error"}],"reg1":null}
+{"event":"restore_pair","monotonic":29886.968230901,"bus":32,"attempt":16,"reg1_write":1,"ctrl_write":1,"ids":[{"error":"Error: Sending messages failed: Remote I/O error"},{"error":"Error: Sending messages failed: Remote I/O error"},{"error":"Error: Sending messages failed: Remote I/O error"}],"reg1":null}
+{"event":"finished_restore","monotonic":29887.126318583,"recovered":false}
+{"event":"snapshot","monotonic":29966.973996943,"label":"preserved-link-reset_before","values":{"30":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"31":{"0xd":148,"0x10":1,"0x44a":64,"0x48a":64},"32":{"0xd":{"error":"Error: Sending messages failed: Remote I/O error"}}}}
+{"event":"write","monotonic":29967.018552293,"bus":31,"reg":"0x333","value":"0xe4","rc":0,"error":""}
+{"event":"canary_and_mux_check","monotonic":29967.070705056,"target_marker":[228,228,228],"other_pair":[78,78,78]}
+{"event":"write","monotonic":29967.088102218,"bus":31,"reg":"0x10","value":"0x81","rc":0,"error":""}
+{"event":"preserved_reset_direct","monotonic":29967.4472911,"ids":[148,{"error":"Error: Sending messages failed: Remote I/O error"},149],"ctrl":25,"lane_map":{"error":"Error: Sending messages failed: Remote I/O error"},"lanes":{"error":"Error: Sending messages failed: Remote I/O error"}}
+{"event":"write","monotonic":29967.514643907,"bus":31,"reg":"0x10","value":"0x1","rc":1,"error":"Error: Sending messages failed: Remote I/O error"}
+{"event":"write","monotonic":29967.633171705,"bus":31,"reg":"0x10","value":"0x1","rc":0,"error":""}
+{"event":"preserved_reset_verification","monotonic":29967.758555115,"lane_map":[78,78,78],"lanes":[64,64],"reg1":2,"other_pair_map":78,"full_reset_verified":false}
+{"event":"write","monotonic":29967.768216012,"bus":31,"reg":"0x333","value":"0x4e","rc":0,"error":""}
+{"event":"canary_restored","monotonic":29967.777371271,"lane_map":78}
+{"event":"failed_pair_reset","monotonic":30026.451564211,"attempt":1,"write_rc":1,"ids":[{"error":"Error: Sending messages failed: Remote I/O error"},{"error":"Error: Sending messages failed: Remote I/O error"},{"error":"Error: Sending messages failed: Remote I/O error"}]}
+{"event":"failed_pair_reset","monotonic":30027.28736482,"attempt":2,"write_rc":1,"ids":[{"error":"Error: Sending messages failed: Remote I/O error"},{"error":"Error: Sending messages failed: Remote I/O error"},{"error":"Error: Sending messages failed: Remote I/O error"}]}
+{"event":"failed_pair_reset","monotonic":30028.095450241,"attempt":3,"write_rc":1,"ids":[{"error":"Error: Sending messages failed: Remote I/O error"},{"error":"Error: Sending messages failed: Remote I/O error"},{"error":"Error: Sending messages failed: Remote I/O error"}]}
+{"event":"finished_failed_pair_reset","monotonic":30028.678299931,"local_access_recovered":false,"video":["/dev/video0","/dev/video1","/dev/video2","/dev/video3"]}
